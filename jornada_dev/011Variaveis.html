@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variaveis</title>
+</head>
+<body>
+    
+
+    <script>
+        /*
+        Variaveis são declarações que servem para armazenar qualquer tipo de data type
+
+        Escopo Global utilizando uma declaração local: basicamente você coloca apenas o nome da variavel dentro da função e seu valor sem o "var", o java vai entender que é uma variavel e irá executa-la
+        */
+        /*Escopo Global*/
+        var nome = "Heitor";
+
+        function teste(){
+            /*Escopo Local*/
+            let nome = "Rafael";
+        }
+
+        teste()
+
+        console.log(nome);
+
+        /*
+        Existe tambem a declaração const, que especifica uma constante, algo que não poderá ser alterado, sendo mais uma questão de segurança
+        */
+    </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+/*
+Tipos Primitivos de DATA TYPES
+
+-String: "Isso é uma String" (Itens entre aspas)
+
+-Number: "1, 2, 3 ..."
+
+-Boolean: True, false
+
+-Undefined: Indefinido (Não encontrado)
+
+-Null: Sem valor
+*/

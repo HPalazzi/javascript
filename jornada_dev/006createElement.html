@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | createElement</title>
+</head>
+<!--
+    Assim como o nome diz DOM create element ela pode ser utilizada para criar efetivamente tags com atributos especificos
+-->
+
+<body>
+
+
+    <script>
+
+        var img =  document.createElement("img");
+        img.src="http://lorempixel.com.br/500/400/?1";
+
+        var p = document.createElement("p");
+        p.innerHTML = "Olá, Tudo bem?"
+
+        console.log(
+            
+            img, p
+        )
+    </script>
+</body>
+</html>

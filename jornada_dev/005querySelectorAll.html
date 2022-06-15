@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | querySelectorAll</title>
+</head>
+<!--
+QuerySelectorALL diferente do query normal que seleciona apenas o primeiro documento de uma classe/id/tag, ele cria uma nodeList, que é basicamente um Array de Leitura
+
+Ele é como se fosse um find do JS
+-->
+
+<body>
+
+    <div class="teste">1</div>
+    <div class="teste">2</div>
+    <div class="teste">3</div>
+
+    <div id="pai">
+        <div class="filho">1</div>
+        <div class="filho">2</div>
+        <div class="filho">3</div>
+    </div>
+
+    <div id="paizao">
+        <div class="filho">oi</div>
+        <div class="filho">oi2</div>
+        <div class="filho">oi3</div>
+    </div>
+
+    <p>OI</p>
+    <p>OLA</p>
+
+    <script>
+        console.log(
+            /*
+            document.querySelectorAll(".teste")
+
+            Como resultado você obtem uma array com todos os itens da classe teste
+            */
+            /*
+            document.getElementById("pai").querySelectorAll(".filho")
+
+            Como resultado você cria um caminho indo de desde especificando o ID=PAI e a CLASS=FILHO contida nele
+            */
+            /*
+            */
+        )
+            if (document.getElementById("pai").querySelectorAll(".filho"))console.log("oii");
+    </script>
+</body>
+</html>

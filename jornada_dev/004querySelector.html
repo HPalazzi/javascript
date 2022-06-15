@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | querySelector</title>
+</head>
+
+<!--
+Query selector é uma "simplificação" do get element by ID-TAG-CLASS
+
+Diferenças do query selector para o getElementByClassName é que diferente do query selector, o get(...) ele coloca como valor um array, ou seja, todos os elementos dessa classe, já o query trará somente o primeiro
+
+Já a diferença do query para o ID/tag é a velocidade, pois o ID foi feito especialmente para os ID, projetos pequenos são muito pouco afetados.
+-->
+
+<body>
+    <div id="teste1">
+        <p>1</p>
+    </div>
+    <div class="teste2">
+        <p>2</p>
+    </div>
+    <p>teste 3</p>
+
+    <script>
+        console.log(
+            document.querySelector("p")
+        )
+    </script>
+</body>
+</html>

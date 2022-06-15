@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyup</title>
+</head>
+<body>
+    <input type="text" id="search">
+    <div id="result">Nenhum resultado</div>
+    <script>
+        var text = document.getElementById("search");
+        var result = document.getElementById("result");
+        var resultDefaultText = "Nenhum resultado otario";
+        text.addEventListener("keyup", function() {
+        var value = this.value;
+        result.innerText = value !== "" ? value : resultDefaultText;
+        })
+    </script>
+</body>
+</html>

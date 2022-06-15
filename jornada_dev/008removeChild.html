@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | removeChild</title>
+</head>
+<!--
+    Basicamente é o oposto do appendChild, sendo sua função remover uma classe filho de uma tag
+-->
+    <div id="nissan">
+
+    </div>
+
+<body>
+    <script>
+        var versa = document.createElement("p");
+        versa.innerHTML = "versa";
+
+        var centra = document.createElement("p");
+        centra.innerHTML = "centra";
+
+        document.getElementById("nissan").appendChild(versa);
+        document.getElementById("nissan").appendChild(centra);
+        
+        document.getElementById("nissan").removeChild(versa);
+    </script>
+</body>
+</html>
