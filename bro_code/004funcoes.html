@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        var nome = window.prompt("Qual é seu nome?");
+        var idade = window.prompt("Qual é a sua idade?");
+        function digaOla(nome, idade){
+            console.log("Olá",nome);
+            console.log("Você tem",idade,"anos");
+            return 
+        }
+        digaOla(nome, idade);*/
+
+        function fahrenheitParaCelcius (f){
+            return (f-32)*(5/9);
+        };
+
+        function celciusParaFahrenheit(c){
+            return (c*9/5)+32;
+        };
+
+        var temperatura = celciusParaFahrenheit(78);
+        
+        console.log("Minha temperatura é",temperatura);
+
+    </script>
+</body>
+</html>
