@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Loops</title>
+</head>
+<body>
+    <h1 id="meuObjeto"></h1>
+    <script>
+
+        var simbolo = window.prompt("Insira um simbolo de sua preferencia");
+        var linhas = window.prompt("Insira um numero de linhas");
+        var colunas = window.prompt("Insira um numero de colunas");
+        
+        for(let i = 0; i < linhas; i++){
+            for(let j = 0; j < colunas; j++){
+                document.getElementById("meuObjeto").innerHTML += simbolo;
+            }
+            document.getElementById("meuObjeto").innerHTML += "<br>";
+        }
+
+
+    </script>
+</body>
+</html>
