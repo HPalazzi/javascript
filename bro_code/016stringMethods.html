@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var meuNome = "Heitor Palazzi";
+        var minhaRua = "RUA MUITO CRIATIVA";
+        var minhaCidade = "CIDADE MUITO CRIATIVA"
+        var meuTelefone = "11-12345-3564"
+
+        console.log(meuNome.length);
+        console.log(meuNome.charAt(0));
+        console.log(meuNome.indexOf("H"));
+        console.log(meuNome.lastIndexOf("R"));
+        console.log(meuNome.trim());
+        console.log(meuNome.toUpperCase());
+        console.log(meuNome.toLowerCase());
+
+        var primeiroNome = meuNome.slice(0, meuNome.indexOf(" "));
+        var segundoNome = meuNome.slice(meuNome.lastIndexOf(" ") + 1);
+        
+        console.log(primeiroNome);
+        console.log(segundoNome);
+
+        var meuEndereco = minhaRua.concat(" ", minhaCidade);
+        console.log(meuEndereco);
+
+        meuTelefone = meuTelefone.replaceAll("-", "");
+        console.log(meuTelefone);
+
+
+    </script>
+</body>
+</html>
