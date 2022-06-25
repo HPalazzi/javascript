@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="especial"></h1>
+
+    <script>
+        /*
+        // ********************
+        // function declaration
+        // ********************
+        sayHello();
+
+        function sayHello(){
+
+            console.log("Hello");
+        }
+        // ********************
+        // function expression
+        // ********************
+
+        let greeting = function(){console.log("Hello")};
+
+        greeting();
+        */
+
+        let greeting = function(){document.getElementById("especial").innerHTML = "GOD, I LOVE LATINAS"};
+
+        output(greeting)
+
+        function output(func){
+            func();
+        }
+    </script>
+</body>
+</html>

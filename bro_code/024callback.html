@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="especial"></h1>
+    <script>
+        let mensagem;
+
+        function displayConsole(output){
+            console.log(output);
+        }
+
+        function displayDOM(output){
+            document.getElementById("especial").innerHTML = output;
+        }
+
+        function setMessage(texto, callback){
+            mensagem = texto;
+            callback(mensagem);
+        }
+        setMessage("GOD, I LOVE LATINAS", displayDOM);
+    </script>
+</body>
+</html>
