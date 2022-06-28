@@ -9,6 +9,14 @@
 <body>
     <script>
         class Carro{
+            //Ele está implicito toda vez que você chama uma classe mas pode ser abertamente explorado, é como se fosse as propiedades de um objeto
+            constructor(marca, modelo, ano, cor){
+                this.marca =  marca;
+                this.modelo =  modelo;
+                this.ano = ano;
+                this.cor = cor;
+            }
+            //E assim como um objeto, a classe pode ter funções
             dirigir(){
                 console.log("Você está dirigindo o carro");
             }
@@ -16,9 +24,19 @@
                 console.log("Você freiou o carro");
             }
         }
-        let carro = new Carro();
-        
-        carro.freiar();
+        let carro1 = new Carro("Ford", "Mustang", 2022, "Vermelho");
+        let carro2 = new Carro("Ferrari", "Ferrari", 2021, "preto");
+
+        console.log(carro1.marca);
+        console.log(carro1.modelo);
+        console.log(carro1.ano);
+        console.log(carro1.cor);
+
+        console.log(carro2.marca);
+        console.log(carro2.modelo);
+        console.log(carro2.ano);
+        console.log(carro2.cor);
+
     </script>
 </body>
 </html>
