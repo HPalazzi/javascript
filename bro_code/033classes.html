@@ -7,21 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    
     <script>
-        let storeUSD = [33, 13, 434, 54, 543];
-        let storeReal;
-
-        function paraReal(value){
-            value *= 5,19;
-            return value
+        class Carro{
+            dirigir(){
+                console.log("Você está dirigindo o carro");
+            }
+            freiar(){
+                console.log("Você freiou o carro");
+            }
         }
+        let carro = new Carro();
         
-        storeReal = storeUSD.map(paraReal);
-
-        console.log(storeUSD);
-        console.log(storeReal);
-
+        carro.freiar();
     </script>
 </body>
 </html>
