@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arvores Binarias</title>
+</head>
+<body>
+    
+    <script>
+        //declarando classe arvore
+        class Arvore {
+            constructor (){
+                this.nos = {}
+            }
+            //Inserindo método inserir com validação do valor para criar a BST
+            inserir(arvore, valor){
+                //Verifica se existe um valor
+                if (arvore.valor){
+                    //valida lado a ser adicionado
+                    if(valor > arvore.valor){
+                        //maior a direita
+                        this.inserir(arvore.direita, valor)
+
+                    } else{
+                        //menor a esquerda
+                        this.inserir(arvore.esquerda, valor)
+
+                    }
+
+                } else {
+                    arvore.valor = valor
+                    arvore.direita = {}
+                    arvore.esquerda = {}
+                }
+            }
+        }
+
+        const novaArvore = new Arvore();
+        novaArvore.inserir(novaArvore.nos, 23)
+        novaArvore.inserir(novaArvore.nos, 46)
+        novaArvore.inserir(novaArvore.nos, 97)
+        novaArvore.inserir(novaArvore.nos, 36)
+        novaArvore.inserir(novaArvore.nos, 24)
+        novaArvore.inserir(novaArvore.nos, 87)
+
+        console.log(novaArvore);
+    </script>
+</body>
+</html>
