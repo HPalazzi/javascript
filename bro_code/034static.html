@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static KeyWord</title>
+</head>
+<body>
+
+
+    <script>
+        class Carro {
+
+            //static property
+            static numeroDeCarros = 0;
+            //static method
+            static comecarCorrida(){
+                console.log("A corrida começou")
+            }
+            constructor(modelo){
+                this.modelo = modelo;
+                Carro.numeroDeCarros += 1;
+            }
+
+        }
+
+        let carro1 = new Carro("Mustang")
+        let carro2 = new Carro("Corvette")
+        let carro3 = new Carro("Porsche")
+
+        console.log(Carro.numeroDeCarros)
+        Carro.comecarCorrida();
+    </script>
+</body>
+</html>

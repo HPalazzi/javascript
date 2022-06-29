@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    
+    <script>
+        class Carro {
+            constructor(modelo, cor){
+                this.modelo = modelo;
+                this.cor = cor;
+            }
+            dirigindo(){
+                console.log("Você está dirigindo", this.modelo)
+            }
+        }
+
+        let garagem = [];
+
+        let carro1 = new Carro("Porsche", "Preto");
+        let carro2 = new Carro("Mustang", "Vermelho");
+        let carro3 = new Carro("Fusca", "Preto");
+        let carro4 = new Carro("Ferrari", "Verde");
+        let carro5 = new Carro("HB20", "Branco");
+        
+        garagem = [carro1, carro2, carro3, carro4, carro5];
+
+        for(let i = 0; i < garagem.length; i++){
+            //console.log(garagem[i].modelo, garagem[i].cor)
+            garagem[i].dirigindo();
+        }
+    </script>
+</body>
+</html>

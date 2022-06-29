@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super KeyWord</title>
+</head>
+<body>
+    <p id="nomeAluno"></p>
+    <p id="idadeAluno"></p>
+    <p id="notaAluno"></p>
+    <hr>
+    <p id="nomeProfessor"></p>
+    <p id="idadeProfessor"></p>
+    <p id="alunosDoProfessor"></p>
+    <script>
+        class Pessoa {
+            constructor(nome, idade){
+                this.idade =  idade;
+                this.nome =  nome;
+            }
+            
+        }
+        class Estudante extends Pessoa {
+            constructor(nome, idade, nota){
+                super(nome, idade);
+                this.nota =  nota;
+            }
+            apresentacao(){
+                document.getElementById("nomeAluno").innerHTML = "Olá "+this.nome;
+                document.getElementById("idadeAluno").innerHTML = "Você tem "+this.idade+" anos";
+                document.getElementById("notaAluno").innerHTML = "Sua média semestral foi: "+this.nota;
+            }
+        }
+        class Professor extends Pessoa  {
+            constructor(nome, idade, tamanhoDaClasse){ 
+                super(nome, idade); 
+                this.tamanhoDaClasse = tamanhoDaClasse;
+            }
+            apresentacao(){
+                document.getElementById("nomeProfessor").innerHTML = "Olá "+this.nome;
+                document.getElementById("idadeProfessor").innerHTML = "Você tem "+this.idade+" anos";
+                document.getElementById("alunosDoProfessor").innerHTML = "Sua classe tem "+this.tamanhoDaClasse+" alunos";
+            }
+        }
+
+        let estudante = new Estudante("Heitor", 18, 8);
+        let professor =  new Professor("Mia Khalifa", 27, 1000000000);
+        
+        estudante.apresentacao();
+        professor.apresentacao();
+    </script>
+</body>
+</html> 

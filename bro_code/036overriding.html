@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overriding</title>
+</head>
+<body>
+    <script>
+        class Veiculo {
+            dirigir (){
+                console.log("Você esta dirigindo o veiculo");
+            }
+        }
+
+        class Carro extends Veiculo{
+            dirigir(){
+                console.log("Você está dirigindo o carro");
+            }
+        }
+
+        class CarroDeCorrida extends Carro{
+            dirigir(){
+                console.log("você esta dirigindo o carro de corrida");
+            }
+        }
+        let veiculo = new Veiculo();
+        let carro = new Carro();
+        let carroDeCorrida = new CarroDeCorrida();
+        veiculo.dirigir();
+        carro.dirigir();
+        carroDeCorrida.dirigir();
+    </script>
+</body>
+</html>

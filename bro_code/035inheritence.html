@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+</head>
+<body>
+    
+    <script>
+        class Animal {
+            constructor(){
+                this.alive =  true;
+            }
+        
+            comer(){
+                console.log("Esse animal está comendo")
+            }
+
+        }
+
+        class Coelho extends Animal{
+            correr(){
+                console.log("O coelho está correndo")
+            }
+        }
+
+        class Peixe extends Animal{
+            nadar(){
+                console.log("O peixe está nadando")
+            }
+        }
+
+        class Gaviao extends Animal{
+            voar(){
+                console.log("O gavião está voando")
+            }
+        }
+        let coelho = new Coelho();
+        let peixe = new Peixe();
+        let gaviao = new Gaviao();
+        gaviao.voar();
+        peixe.nadar();
+        coelho.correr();
+    </script>
+</body>
+</html>
