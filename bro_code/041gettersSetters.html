@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    
+    <script>
+        //Propriedade Get
+        class Curso{
+            constructor(materia, professor, duracao) {
+                this.materia = materia;
+                this.professor = professor;
+                this.duracao = duracao;
+                //Agora dados das notas
+            }
+            get nomeProfessor(){return this.professor};
+        }
+
+        class Boletim{
+            constructor(participacao, np1, np2){
+                this.participacao = participacao;
+                this.np1 = np1;
+                this.np2 = np2;
+            }
+            get mediaFinal(){return parseInt((this.participacao + this.np1 + this.np2)/3)}
+        }
+        let infoSemestre1 = new Curso('Programação Orientada a objetos', 'Heitor Palazzi', "6 meses");
+        let notaSemestre1 = new Boletim(10, 9.1, 10)
+
+        console.log(notaSemestre1.mediaFinal);
+        console.log(infoSemestre1.professor);
+        
+        /*
+        class Usuario {
+            constructor(primeiro, ultimo){
+                this.primeiro = primeiro;
+                this.ultimo = ultimo;
+            }
+            //Setters
+            set primeiro(valor){this.primeiroNome = valor.toUpperCase()}
+            set ultimo(valor){this.ultimoNome = valor.toUpperCase()}
+            //getters
+            get nomeCompleto(){return this.primeiroNome+" "+this.ultimoNome}
+        }
+
+        let usuario1 = new Usuario("Heitor","Palazzi")
+        let usuario2 = new Usuario("Ana","Clara")
+        let usuario3 = new Usuario("Olivia","Palazzi")
+
+        console.log(usuario1.nomeCompleto);
+        console.log(usuario2.nomeCompleto);
+        console.log(usuario3.nomeCompleto);
+        */
+    </script>
+</body>
+</html>
