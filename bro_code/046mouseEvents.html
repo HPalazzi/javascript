@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <div id="minhaDiv"></div>
+    <script>
+        const div = document.querySelector("#minhaDiv");
+        let r = Math.random() * 255;
+        let g = Math.random() * 255;
+        let b = Math.random() * 255;
+        div.style.backgroundColor = "gray";
+        div.style.width = "450px";
+        div.style.height = "450px";
+
+        
+
+        div.addEventListener("mouseover", e => {
+            div.style.backgroundColor = `rgba(${r}, ${g}, ${b})`;
+        })
+
+    </script>
+</body>
+</html>
