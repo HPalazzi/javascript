@@ -19,7 +19,7 @@
     <!--ClassList Add-->
     <h3>Clique no botão para adicionar a Turma</h3>
     <br>
-    <input type="button" id="Btn" value="Clique em mim" class="myClass" onclick="getClass();">
+    <input type="button" id="Btn" value="Clique em mim" class="myClass1 myClass2 myClass3 myClass4" onclick="getClass();">
     <script>
         /*
         //ADD
@@ -42,8 +42,16 @@
             let verificador = document.querySelector("#Btn");
             document.write(verificador.classList.contains("myClass")+"<br>"+"myClass é o nome da Classe")
         }
+        //REPLACE
+        function replaceClass(){
+            let substituidor = document.querySelector("#Btn");
+            substituidor.classList.replace("myClass1","myClass2")
+        }
         */
-
+        function getClass() {
+            let indentificador = document.querySelector("#Btn");
+            alert(indentificador.classList.item(2))
+        }
         
         
     </script>
