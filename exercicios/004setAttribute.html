@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>É um exemplo de <strong>Atualização</strong> de um atributo usando o método setAttribute().</h2>
+    <input id="especial" type="text" value="Heitor Palazzi">
+    <p>Clique no botão para ver efeito</p>
+    <button onclick="change()">Alterar</button>
+    <script>
+
+        function change(){
+            document.querySelector("#especial").setAttribute("type", "button")
+        }
+    </script>
+</body>
+</html>
