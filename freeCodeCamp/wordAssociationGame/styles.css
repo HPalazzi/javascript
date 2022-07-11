@@ -1,0 +1,70 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+.app{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 100px;
+}
+
+.questions{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.question-box{
+    background-color: rgb(21, 21, 21);
+    margin: 1em;
+    color: rgb(230, 230, 230);
+    border-radius: 10px;
+    padding: 0 40px 10px 40px;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.question-box h1 {
+    text-align: left;
+    color: rgb(177, 136, 211);
+}
+
+.question-buttons{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.question-button{
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(75,134,111);
+    color: rgb(255, 255, 255);
+    font-family: 'Varela Round', sans-serif;
+}
+
+.question-button:hover{
+    background-color: rgba(75, 134, 111, 0.519);
+    color: rgba(255, 255, 255, 0.571);
+    transition: 0.5s;
+}
+
+.question-button:disabled{
+    background-color: rgb(189, 189, 189);
+    color: rgb(136, 136, 136);
+}
+
+.answser-display{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.answerDisplay.correct{
+    color: rgb(20, 177, 20);
+}
+.answerDisplay.incorrect{
+    color: rgb(206, 16, 16);
+}

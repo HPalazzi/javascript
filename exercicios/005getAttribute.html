@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        #div1{
+            background-color: yellow;
+            font-size: 2em;
+            color: red;
+            border: 2px solid red;
+        }
+        #div2{
+            background-color: lightblue;
+            font-size: 2em;
+            color: blue;
+            border: 2px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">Primeiro elemento</div>
+    <!--<div id="div2">Segundo elemento</div>-->
+    <br> <a href="https://www.instagram.com/palazzi__/" id="link" target="_blank">instagram/HeitorPalazzi</a>
+    <br> <button onclick="fun()" id="Btn">Clique em mim</button>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <script>
+        /*function fun(){
+            let identificador1 = document.querySelector("#div1").getAttribute("id");
+            let identificador2 = document.querySelector("#div2").getAttribute("id");
+            document.querySelector("#p1").innerHTML = identificador1;
+            document.querySelector("#p2").innerHTML = identificador2;
+        }*/
+        function fun(){
+            let identificador1 = document.querySelector("#Btn").getAttribute("onclick");
+            let identificador2 = document.querySelector("#link").getAttribute("href");
+            document.querySelector("#p1").innerHTML = identificador1;
+            document.querySelector("#p2").innerHTML = identificador2;
+        }
+
+    </script>
+</body>
+</html>
