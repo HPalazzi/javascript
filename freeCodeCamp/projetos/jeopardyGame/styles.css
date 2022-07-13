@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 :root{
-    --cor001:rgb(46, 46, 46);
+    --cor001:rgb(57, 52, 52);
     --cor002: rgb(255, 255, 255);
     --cor003:rgb(32, 32, 32);
     --cor004: rgb(26,26, 255);
@@ -10,6 +10,8 @@
     --cor006: rgb(11,11,91);
     --cor007: rgb(1,61,200);
     --cor008: rgb(20,20,89);
+    --cor009: rgb(24,171,24);
+    --cor010: rgb(190,57,37);
 
     --font001: 'Anton', sans-serif;
 }
@@ -23,6 +25,7 @@ body{
     align-items: center;
     flex-direction: column;
     font-family: var(--font001);
+    color: black;
 }
 
 #game {
@@ -34,7 +37,7 @@ body{
     width: 160px;
     height: 120px;
     background-color: var(--cor004);
-
+    color: black;
     border-left: solid var(--cor005) 10px;
     border-right: solid var(--cor006) 10px;
     border-top: solid var(--cor007) 10px;
@@ -44,4 +47,20 @@ body{
     margin: 5px;
     padding: 10px;
     line-height: 120px;
+    word-spacing: 1px;
+}
+.genre-title{
+    background-color: var(--cor004);
+    text-align: center;
+    font-size: 2em;
+    padding: 1px;
+    margin: 10px;
+    color: black;
+}
+.first-button{
+    background-color: var(--cor009);
+}
+
+.second-button{
+    background-color: var(--cor010);
 }
