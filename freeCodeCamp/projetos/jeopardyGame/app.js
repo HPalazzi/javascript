@@ -120,14 +120,31 @@ const jeopardyCategories = [
   ]
   
 function addCategory(category) {
-const column = document.createElement('div')
-column.classList.add('genre-column')
+    const column = document.createElement('div')
+    column.classList.add('genre-column')
 
-const genreTitle = document.createElement('div')
-genreTitle.classList.add('genre-title')
-genreTitle.innerHTML = category.genre
+    const genreTitle = document.createElement('div')
+    genreTitle.classList.add('genre-title')
+    genreTitle.innerHTML = category.genre
 
-column.append(genreTitle)
-game.append(column)
+    column.append(genreTitle)
+    game.append(column)
+
+    category.questions.forEach(question => {
+        const card = document.createElement('div');
+        card.classList.add('card')
+        column.append(card)
+
+        if(question.level === 'facil'){
+            card.innerHTML = 100
+        }
+        if(question.level === 'medio'){
+            card.innerHTML = 200
+        }
+        if(question.level === 'dificil'){
+            card.innerHTML = 300
+        }
+    })
+
 }
 jeopardyCategories.forEach((category) => addCategory(category))
