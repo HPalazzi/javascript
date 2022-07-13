@@ -1,0 +1,47 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+:root{
+    --cor001:rgb(46, 46, 46);
+    --cor002: rgb(255, 255, 255);
+    --cor003:rgb(32, 32, 32);
+    --cor004: rgb(26,26, 255);
+    --cor005: rgb(19, 19, 160);
+    --cor006: rgb(11,11,91);
+    --cor007: rgb(1,61,200);
+    --cor008: rgb(20,20,89);
+
+    --font001: 'Anton', sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color:var(--cor001);
+    color: var(--cor002);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: var(--font001);
+}
+
+#game {
+    display: flex;
+    background-color: var(--cor003);
+}
+
+.card {
+    width: 160px;
+    height: 120px;
+    background-color: var(--cor004);
+
+    border-left: solid var(--cor005) 10px;
+    border-right: solid var(--cor006) 10px;
+    border-top: solid var(--cor007) 10px;
+    border-bottom: solid var(--cor008) 10px;
+    text-align: center;
+    font-size: 100px;
+    margin: 5px;
+    padding: 10px;
+    line-height: 120px;
+}
