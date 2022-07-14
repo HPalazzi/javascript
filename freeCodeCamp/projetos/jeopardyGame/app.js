@@ -1,5 +1,5 @@
 const game = document.querySelector("#game");
-const score =  document.querySelector("#score");
+const scoreDisplay =  document.querySelector("#score");
 
 const jeopardyCategories = [
     {
@@ -42,7 +42,7 @@ const jeopardyCategories = [
         },
         {
                 question: 'Por que você sempre foge de seus problemas?',
-                answers: ['?', 'Do que você está falando?'],
+                answers: ['?', 'O que?'],
                 correct: '?',
                 level: 'dificil',
         },
@@ -53,8 +53,8 @@ const jeopardyCategories = [
       questions: [
         {
                 question: 'Quando ocorre o Natal?',
-                answers: ['30/12', 'entre 24/12 e 25/12'],
-                correct: 'entre 24/12 e 25/12',
+                answers: ['30/12', '24/12 e 25/12'],
+                correct: '24/12 e 25/12',
                 level: 'facil',
         },
         {
@@ -118,7 +118,9 @@ const jeopardyCategories = [
       ],
     },
   ]
-  
+
+let score = 0;
+
 function addCategory(category) {
     const column = document.createElement('div')
     column.classList.add('genre-column')
@@ -170,5 +172,38 @@ function flipCard (){
         secondButton.classList.add('second-button')
         firstButton.innerHTML = this.getAttribute('data-answer-1')
         secondButton.innerHTML = this.getAttribute('data-answer-2')
+        firstButton.addEventListener('click', getResult)
+        secondButton.addEventListener('click', getResult)
         this.append(textDisplay,firstButton,secondButton)
+
+        const allCards = Array.from(document.querySelectorAll('.card'))
+        allCards.forEach(card => card.removeEventListener('click', flipCard))
 }
+
+function getResult() {
+        const allCards = Array.from(document.querySelectorAll('.card'))
+        allCards.forEach((card) => card.addEventListener('click', flipCard))
+      
+        const cardOfButton = this.parentElement
+      
+        if (cardOfButton.getAttribute('data-correct') == this.innerHTML) {
+          score = score + parseInt(cardOfButton.getAttribute('data-value'))
+          scoreDisplay.innerHTML = score
+          cardOfButton.classList.add('correct-answer')
+          setTimeout(() => {
+            while (cardOfButton.firstChild) {
+              cardOfButton.removeChild(cardOfButton.lastChild)
+            }
+            cardOfButton.innerHTML = cardOfButton.getAttribute('data-value')
+          }, 100)
+        } else {
+          cardOfButton.classList.add('wrong-answer')
+          setTimeout(() => {
+            while (cardOfButton.firstChild) {
+              cardOfButton.removeChild(cardOfButton.lastChild)
+            }
+            cardOfButton.innerHTML = 0
+          }, 100)
+        }
+        cardOfButton.removeEventListener('click', flipCard)
+      }

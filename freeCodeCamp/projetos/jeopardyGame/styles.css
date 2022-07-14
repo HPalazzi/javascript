@@ -12,6 +12,10 @@
     --cor008: rgb(20,20,89);
     --cor009: rgb(24,171,24);
     --cor010: rgb(190,57,37);
+    --cor011: rgba(24, 171, 24, 0.631);
+    --cor012: rgba(190, 57, 37, 0.654);
+    --cor013: rgb(186,186,24);
+    --cor014: rgb(221,64,56);
 
     --font001: 'Anton', sans-serif;
 }
@@ -63,4 +67,21 @@ body{
 
 .second-button{
     background-color: var(--cor010);
+}
+
+.first-button:hover{
+    background-color: var(--cor011);
+    transition: 0.6s;
+}
+
+.second-button:hover{
+    background-color: var(--cor012);
+    transition: 0.6s;
+}
+
+.correct-answer{
+    background-color: var(--cor013);
+}
+.wrong-answer{
+    background-color: var(--cor014);
 }
