@@ -7,8 +7,39 @@
     <title></title>
 </head>
 <body>
-    
-    <script>
-        
-    </script>
+    <label id="a">Valor do Lado a</label>
+    <br>
+    <input type="text" id="valorA">
+    <br>
+    <label id="b">Valor do Lado b</label>
+    <br>
+    <input type="text" id="valorB">
+    <br>
+    <button type="button" id="button">Calcular</button>
+    <br>
+    <label id="c"></label>
+
+<script>
+    let a;
+    let b;
+    let c;
+    /*
+    a = window.prompt("Valor de A")
+    b = window.prompt("Valor de B")
+
+    c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2))
+
+    console.log("Hipotenusa é:", c);
+    */
+    document.getElementById("button").onclick = function(){
+        a = document.getElementById("valorA").value
+        a = Number(a)
+        b = document.getElementById("valorB").value
+        b = Number(b)
+        c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2))
+
+        document.getElementById("c").innerHTML = "Lado C: " + c;
+    }
+
+</script>
 </body>
