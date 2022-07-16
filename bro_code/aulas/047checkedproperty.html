@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <!--
+    <label for="i">Clica se você me ama</label>
+    <input type="checkbox" id="i"> <br>
+    -->
+    <label for="visaBtn">Visa</label>
+    <input type="radio" name="card" id="visaBtn"><br>
+
+    <label for="masterCardBtn">MasterCard</label>
+    <input type="radio" name="card" id="masterCardBtn"><br>
+
+    <label for="payPalBtn">PayPal</label>
+    <input type="radio" name="card" id="payPalBtn"><br>
+    <br>
+    <button id="btn">submit</button> <br>
+    
+<script>
+    const btn = document.getElementById("btn")
+    const visaBtn = document.getElementById("visaBtn")
+    const masterCardBtn =  document.getElementById("masterCardBtn")
+    const payPalBtn = document.getElementById("payPalBtn")
+    const checkBox = document.getElementById("i")
+    /*
+    btn.onclick = function(){
+        if(checkBox.checked){
+            console.log("Você me ama");
+        } else{
+            console.log("Você NÃO me ama");
+        }
+    }
+    */
+   btn.onclick = function () {
+    if(visaBtn.checked){
+        console.log("Você selacionou visa como forma de  pagamento");
+    }
+    else if(masterCardBtn.checked){
+        console.log("Você selacionou MasterCard como forma de  pagamento")
+    }
+    else if(payPalBtn.checked){
+        console.log("Você selacionou PayPal como forma de  pagamento")
+    }
+    else{
+        console.log("Nenhuma forma de pagamento selecionada")
+    }
+   }
+    
+</script>
+</body>

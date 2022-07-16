@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+   
+    
+
+<script>
+    let area;
+    let width;
+    let height;
+
+    width = window.prompt("Coloque a Largura")
+    height = window.prompt("Coloque a Altura")
+
+    area = getArea(height,width);
+    
+    console.log("A area de seu retangulo é", area);
+
+    function getArea(height,width){
+        let result = height * width;
+        return result;
+    }
+</script>
+</body>
