@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    
+<script>
+    
+    let numero1 = 127371347.74637;
+    let numero2 = 127371347.74637;
+    let numero3 = .1;   
+    let numero4 = 100;
+
+    numero1 = numero1.toLocaleString("pt-br")
+    numero2 = numero2.toLocaleString("pt-br", {style: "currency", currency:"BRL"})
+    numero3 = numero3.toLocaleString(undefined ,{style: "percent"})
+    numero4 =  numero4.toLocaleString(undefined, {style:'unit', unit:'celsius'})
+
+    console.log(numero1);    
+    console.log(numero2);
+    console.log(numero3);
+    console.log(numero4);
+</script>
+</body>
