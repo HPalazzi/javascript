@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1>jogo de adivinhação de números</h1>
+    <p>Escolha um número de 1 - 10</p>
+    <label>Coloque seu número</label>
+    <input type="text" id="guessField">
+    <input type="submit" id="submitButton">
+<script>
+    const answer = Math.floor(Math.random() * 10 + 1);
+    let guesses = 0;
+
+    document.querySelector("#submitButton").onclick = function(){
+        let guess = document.querySelector("#guessField").value;
+        guesses+=1;
+
+        if(guess == answer){
+            alert(`${answer} é a resposta correta. Você levou ${guesses} tentativas.`)
+        }
+        else if(guess < answer){
+            alert("Maior!")
+        }
+        else{
+            alert("Menor!")
+        }
+    }
+</script>
+</body>
