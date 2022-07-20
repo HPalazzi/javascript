@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    
+<script>
+    try{
+        let x = window.prompt("Entre um numero");
+        x = Number(x);
+        
+        if(isNaN(x)) throw "Isso não é um numero";
+        if(x == "") throw "Coloca alguma coisa porra"
+
+        console.log(`${x} é um numero`);
+    }
+    catch(error){
+        console.log(error)
+    }
+    finally{
+        console.log('O bloco finally sempre executa!')
+    }
+</script>    
+</body>
+</html>
