@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    
+<script>
+    const loja = new Map([
+        ['Camisa', 50],
+        ['Calça', 100],
+        ['Moletom', 150],
+        ['Cueca', 20]
+    ])
+
+    loja.set('Macacão de latex', 200)
+    loja.delete('Macacão de latex')
+    console.log(loja.has('Macacão de latex'));
+    console.log(loja.size);
+
+    loja.forEach((valor, nome) => console.log(`${nome} custa R$${valor}`))
+
+    let carrinhoDeCompras = 0;
+    carrinhoDeCompras += loja.get('Camisa')
+    carrinhoDeCompras += loja.get('Calça')
+
+    console.log(`Esse é o valor total de suas compras: ${carrinhoDeCompras}
+    `)
+</script>
+</body>
+</html>
