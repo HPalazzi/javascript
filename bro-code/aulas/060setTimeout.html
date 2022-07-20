@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <button id="btn">Comprar</button>
+<script>
+    let btn = document.querySelector("#btn");
+
+    let item = 'palazziCoin';
+    let valorMoeda = 460.69;
+
+    let anuncio1 = setTimeout(primeira, 3000, item, valorMoeda)
+    let anuncio2 = setTimeout(segunda, 6000)
+    let anuncio3 = setTimeout(terceira, 9000)
+
+
+    function primeira(item, valorMoeda){
+        alert(`COMPRE MEU ${item} POR APENAS R$ ${valorMoeda} E 1 ALMA DE UM ENTE QUERIDO!!`)
+    }
+    function segunda(){
+        alert(`NÃO É ROUBO`)
+    }
+    function terceira(){
+        alert(`FAÇA!!!!`)
+    }
+
+    btn.addEventListener("click", e => {
+        clearTimeout(anuncio1)
+        clearTimeout(anuncio2)
+        clearTimeout(anuncio3)
+        alert(`Obrigado por comprar!`)
+    })
+</script>
+</body>
+</html>
