@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        div{
+            font-size: 10em;
+            margin-top: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div><label id="myLabel"></label></div>
+<script>
+    const myLabel =  document.querySelector("#myLabel");
+
+    update();
+    setInterval(update, 1000)
+
+    function update(){
+        let date = new Date();
+        myLabel.innerHTML =  formatTime(date)
+
+        function formatTime(){
+            let horas = date.getHours();
+            let minutos = date.getMinutes();
+            let segundos = date.getSeconds();
+
+            horas = formatcaoDeZeros(horas)
+            minutos = formatcaoDeZeros(minutos)
+            segundos = formatcaoDeZeros(segundos)
+
+            return `${horas}:${minutos}:${segundos}`
+        }
+    }
+
+    function formatcaoDeZeros(time){
+        time = time.toString();
+        return time.length < 2 ? "0" + time : time;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    
+<script>
+    let count = 0;
+    let max =  window.prompt(`Quer contar até que numero?`);
+    max = Number(max)
+
+    //const meuTemporizador1 = setInterval(countUp, 1000);
+    const meuTemporizador2 = setInterval(countDown, 1000);
+    
+    function countUp(){
+        count +=1;
+        console.log(count);
+        if(count >= max){
+            clearInterval(meuTemporizador1)
+        }
+    }
+
+    function countDown(){
+        max--
+        console.log(max);
+        if(max <= 0){
+            clearInterval(meuTemporizador2)
+        }
+    }
+
+
+</script>
+</body>
+</html>
